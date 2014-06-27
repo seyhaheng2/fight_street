@@ -1,0 +1,37 @@
+<header>
+		<div class="topbar" style="border-bottom: 1px solid #F4F5F5;">
+			<div class="brand">
+				<%= link_to "Tvermech™",root_path %>
+			</div>
+			<ul class="nav-link">
+				<li><%= link_to "Home",root_path %></li>
+				<li><%= link_to "Training",root_path %></li>
+				<li><%= link_to "Course",root_path %></li>
+				<li><%= link_to "Contacts",new_contact_path %></li>
+			</ul>
+			<ul class="login-form">
+				<% if user_signed_in? %>
+					<li>
+						<%= link_to site_about_path do%>
+							<%= image_tag current_user.image ,size: "34" %> Profile
+						<% end %>
+						<ul>
+							<li>
+								<%= link_to site_info_path do %>
+								<i class="fa fa-info"></i>&nbsp;
+								<%= current_user.username %>
+								<% end %>
+							</li>
+							<li><%= link_to '<i class="fa fa-wrench"></i> settings'.html_safe, edit_user_registration_path %></li>
+							<li><%= link_to '<i class="fa fa-sign-out"></i> logout'.html_safe,destroy_user_session_path, method: :delete %>
+							</li>
+						</ul>
+					</li>
+				<% else %>
+					<li><%= link_to "Login", new_user_session_path %></li>
+				<% end %>
+			</ul>
+		</div>
+</header>
+
+

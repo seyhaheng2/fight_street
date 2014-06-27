@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="large-6 columns">
+		<h4>Contact Form</h4>
+		<%= form_for @contact do |f| %>
+		<div class="large-6 columns" style="padding-left:0px;">
+			<%= f.label :name %>
+			<%= f.text_field :name, required: false  %>
+		</div>
+		<div class="large-6 columns" style="padding-right:0px;">
+			<%= f.label :email %>
+			<%= f.text_field :email, required: false  %>
+		</div>
+
+			<%= f.label :message %>
+			<%= f.text_area :message, as: :text, required: false,rows: 8  %>
+			<div class="hidden">
+				<%#= f.text_field :nickname, hint: "Leave this field blank!" %>
+				<%= f.submit 'Send Message',class: "button primary small" %>
+			</div>
+		<% end %>
+	</div>
+</div>

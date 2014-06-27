@@ -1,0 +1,7 @@
+<div class="row">
+	<h3>Profile <%= image_tag current_user.image,size: "35" %></h3>
+	<hr style="margin-top:0px;">
+	<p><%= link_to current_user.name %></p>
+	<p><%= link_to (current_user.link).html_safe %></p>
+	<p>Gender: <%= link_to current_user.gender %></p>
+	

@@ -1,0 +1,329 @@
+// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Exo);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+header{
+padding-bottom:90px;
+	.topbar{
+		z-index: 400;
+		background: #fff;
+		position:fixed;
+		width: 100%;
+		padding-left:5%;
+		padding-right:5%;
+		height: 90px;
+		margin:0px;
+		display:flex;
+		-webkit-display:flexbox;
+		// line-height: 1.25;
+		.brand{
+			width: 230px;
+			padding:0px;
+			a{
+				font-size:1.8em;
+				color:black;
+				font-family: 'Exo', sans-serif;
+				-webkit-font-weight:800;
+				font-weight:800;
+				display: block;
+				padding:29px 0px;
+				color: #F0C417;
+				// text-shadow: 1px #F0C417;
+				&:hover{
+					transition: 0.5s;
+					color: #F0C417;
+					text-shadow: 1px #F0C417;
+				}
+			}
+		}
+		ul.nav-link{
+			list-style: none outside none;
+			width: 50%;
+			li{
+				list-style-type:none;
+				display: inline-block;
+				text-transform: uppercase;
+				font-size: 0.938rem;
+				line-height: 1.875rem;
+				letter-spacing: 0.05em;
+				&:hover{
+					border-bottom:3px solid #000;
+				}
+				a{
+					color:black;
+					font-family: blenderbold,Verdana,sans-serif;
+					font-weight: lighter;
+					display: block;
+					padding: 29px 12px;
+					&:hover{
+						color:#F0C417;
+						text-shadow: 1px #F0C417;
+					}
+				}
+			}
+		}
+		ul.login-form{
+			list-style: none outside none;
+			width: 350px;
+			
+			li{
+				span{
+					position:absolute;
+					img{
+						
+					}
+				}
+				list-style-type:none;
+				display: inline-block;
+				text-transform: uppercase;
+				font-size: 0.938rem;
+				line-height: 1.875rem;
+				letter-spacing: 0.05em;
+				float: right;
+				a{
+					color:#000;
+					font-family: blenderbold,Verdana,sans-serif;
+					font-weight: lighter;
+					
+					display: inline-block;
+					padding: 29px 12px;
+					&:hover{
+						color:#F0C417;
+						text-shadow: 1px #F0C417;
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+.content{
+	height: 610px;
+	background: url(5.jpg) no-repeat scroll 0px -100px / cover;
+	margin-bottom:0px;
+	.title-content{
+		padding-top:200px;
+		h2{
+			color:#fff;
+			text-align: center;
+			font-size:6em;
+			font-family: 'Abel', sans-serif;
+			font-weight: 700;
+			&:hover{
+				transition:2s;
+				color:#F0C110;
+			}
+		}
+	}
+}
+
+
+// .title-content{
+// 	.row{
+// 		h2{
+// 			color: #F0C417;
+// 		}
+// 	}
+// }
+
+.nav-bg{
+	//background: #2EB1A5;
+	background: #F0C417;
+}
+.pad-tb{
+	padding-top:40px;
+	padding-bottom: 50px;
+}
+.large-4{
+	big{
+		color:#fff;
+		font-family: 'Abel', sans-serif;
+		font-weight: 700;
+		font-size:1.5em;
+	}
+	.logo{
+		margin-top:0px;
+		padding-top:0px;
+		margin-bottom: 20px;
+		i{
+			margin-top:20px;
+			font-size:2em;
+			color:#fff;
+			// background: red;
+			padding:40px 40px;
+			border-radius:180px;
+			border:2px solid #fff;
+		}
+	}
+}
+
+.mar-t{
+	margin-top: 60px;
+}
+.large-6{
+	.image-logo{
+		text-align: center;
+		img{
+
+			width: 70%;
+			height: 200px;
+		}
+	}
+	h5{
+		font-size:22px;
+		font-weight: 400;
+		big{
+			color:#4285F4;
+			font-size:1em;
+		}
+	}
+	p{
+		font-size:0.9em;
+	}
+	.left{
+		
+		li{
+			display: inline-block;
+			list-style-type: none;
+			font-size:0.8em;
+			color:#4285F4;
+			
+		}
+	}
+}
+.text-centered{
+	text-align: center;
+}
+.bor-r{
+	border-left: 2px solid #008CBA;
+	padding-left:30px;
+}
+.row{
+	.large-5{
+		padding-left:35px;
+	}
+}
+.large-4{
+	.control-button{
+		a{
+			display: inline-block;
+		}
+	}
+}
+.alert-box{
+	margin-bottom:0px;
+	margin-top: 20px;
+	.close{
+		margin-top: 0.4575rem;
+	}
+}
+ul.login-form{
+
+		ul{
+			display: none;
+			position: absolute;
+			li{
+				a{
+					padding:0px;
+				}
+			}
+		}
+}
+ul.login-form li:hover ul{
+	margin-top:-3px;
+	display: block;
+	width: 160px;
+	background: #48C9B0;
+	padding:13px;
+	margin-right:-80px;
+	li{
+		float: left;
+		font-size:0.8em;
+		a{
+			padding:0px 10px;
+			color:#fff;
+			&:hover{
+				color:#fff;
+			}
+		}
+	}
+}
+.mar-tt{
+	margin-top: 20px;
+}
+.large-7{
+	h2{
+		font-family: 'Abel', sans-serif;
+		font-weight: lighter;
+		color:#888;
+	}
+}
+.large-5{
+
+	img{
+		border-radius:220px;
+		margin-top: 30px;
+	}
+	h4{
+		font-family: 'Abel', sans-serif;
+		font-weight: lighter;
+		color:#888;
+	}
+	.text-content{
+		text-align: left;
+		h5{
+			font-weight: 800;
+		}
+		p{
+			font-size: 1em;
+		}
+	}
+}
+.footer-bg{
+	background: #34495e;
+	height: 300px;
+}
+footer{
+	.footer{
+		ul.foot-bar{
+			h2{
+				margin-top: 0;
+				font-size:1.8em;
+				color:black;
+				font-family: 'Exo', sans-serif;
+				-webkit-font-weight:800;
+				font-weight:800;
+				display: block;
+				color: #F0C417;
+				text-align: center;
+			}
+			p{
+				text-align: center;
+				margin-top: 20px;
+				i{
+					font-size: 30px;
+					padding:0px 8px;
+					&:hover{
+						padding-bottom:3px;
+						border-bottom:3px solid;
+					}
+				}
+			}
+			li{
+				list-style-type:none;
+				font-family: 'Abel', sans-serif;
+				text-transform: uppercase;
+				color:#888;
+				a{
+					text-transform: capitalize;
+					color:#677786;
+					&:hover{
+						color:#F0C417;
+					}
+				}
+			}
+		}
+	}
+}

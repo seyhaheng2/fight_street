@@ -1,0 +1,37 @@
+<div class="row">
+<div class="large-9 columns large-centered">
+<div class="large-4 columns meduim-6" style="margin-top:40px;text-align:right;">
+<h4>Cancel my account</h4>
+    <p>Unhappy? <%= button_to "Deactive Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete ,class: "button google small"%></p>
+ </div>   
+  <div class="large-8 columns meduim-6 bor-r" style="margin-top:40px;">
+    <h4>Edit Information <%#= resource_name.to_s.humanize %></h4>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
+
+      <div class="large-5 columns" style="padding:0px;">
+        <%= f.label :username %>
+        <%= f.email_field :username, autofocus: true %>
+      </div>
+      <div class="large-7 columns" style="padding-right:0px;">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+    
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+    <div class="large-6 columns" style="padding:0px;">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+    <div class="large-6 columns" style="padding-right:0px;" >
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+    <div><%= f.label :current_password %>
+    <%= f.password_field :current_password, autocomplete: "off" %></div>
+    <div><%= f.submit "Update", class: "button small primary expand" %></div>
+    <% end %>
+  </div>
+</div></div>

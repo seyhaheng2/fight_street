@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="large-5 medium-5 medium-centered columns large-centered bor-r" style="margin-top:20px;">
+		<h4>Get Login</h4>
+		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+		  <div><%#= f.label :email %>
+		  <%= f.email_field :email, autofocus: true,placeholder: "Username or Email" %></div>
+
+		  <div><%#= f.label :password %>
+		    <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %></div>
+
+		  <% if devise_mapping.rememberable? -%>
+		    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+		  <% end -%>
+
+		  <div><%= f.submit "Sign in", class: "button small expand twitter " %></div>
+		<% end %>
+	</div>
+	<div class="large-5 columns medium-centered large-centered text-centered">
+		<div class="control-button ">
+			<%= link_to '<i class="fa fa-facebook" style="font-size:16px;padding-right:5px;border-right:2px solid #fff;"></i> Sign up with Facebook'.html_safe,user_omniauth_authorize_path(:facebook),class: "button small facebook" %>|<%= link_to '<i class="fa fa-google-plus" style="font-size:16px;padding-right:5px;border-right:2px solid #fff;"></i> Sign up with Google'.html_safe,user_omniauth_authorize_path(:facebook),class: "button small google" %></div>
+	</div>
+</div>
