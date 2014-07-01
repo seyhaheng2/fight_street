@@ -1,5 +1,35 @@
 <div class="row">
-	<div class="large-5 medium-5 medium-centered columns large-centered bor-r" style="margin-top:20px;">
+<div class="large-12 columns">
+	<div class="large-7 columns text-centered" style="margin-top:40px;display:flex;martin-bottom:15px;">
+		<%= link_to do %>	
+			<div class="pre-account text-centered">
+				<div class="title">Member</div>
+				<div class="pre-content">
+					<ul>
+						<li>Streaming Training</li>
+						<li style="text-align:center;"><b>Free Member</b></li>
+					</ul>
+				</div>
+			 </div>
+			 <h6 style="text-align;padding-left:0px;margin-top:8px;"><li style="color:#677786;list-style-type:none;text-algin:left;">Don't Have Socail Account</li></h6>
+		<% end %> 
+		<%= link_to do %>
+			 <div class="pre-account text-centered">
+				<div class="title">Premuim Account</div>
+				<div class="pre-content">
+					<ul>
+						<li>Streaming Training & Course</li>
+						<li>Download Video Course</li>
+						<li>Download Sources Code</li>
+						<li>Full Training Course</li>
+						<li style="text-align:center;"><b>Course 100$ / year</b></li>
+					</ul>
+				</div>
+			 </div>
+			 <h6 style="text-align;padding-left:0px;margin-top:8px;"><li style="color:#677786;list-style-type:none;">Join Premium Account</li></h6>
+		<% end %>
+	</div>
+	<div class="large-5 medium-5 columns bor-r" style="margin-top:40px;">
 		<h4>Get Login</h4>
 		<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 		  <div><%#= f.label :email %>
@@ -14,9 +44,10 @@
 
 		  <div><%= f.submit "Sign in", class: "button small expand twitter " %></div>
 		<% end %>
+		<div class="control-button" style="display:flex;">
+			<%= link_to '<i class="fa fa-facebook" style="font-size:16px;padding-right:5px;border-right:2px solid #fff;"></i> Sign up with Facebook'.html_safe,user_omniauth_authorize_path(:facebook),class: "button small expand facebook" %> 
+			<%= link_to '<i class="fa fa-google-plus" style="font-size:16px;padding-right:5px;border-right:2px solid #fff;"></i> Sign up with Google'.html_safe,user_omniauth_authorize_path(:google_oauth2),class: "button small expand google" %>
+		</div>
 	</div>
-	<div class="large-5 columns medium-centered large-centered text-centered">
-		<div class="control-button ">
-			<%= link_to '<i class="fa fa-facebook" style="font-size:16px;padding-right:5px;border-right:2px solid #fff;"></i> Sign up with Facebook'.html_safe,user_omniauth_authorize_path(:facebook),class: "button small facebook" %>|<%= link_to '<i class="fa fa-google-plus" style="font-size:16px;padding-right:5px;border-right:2px solid #fff;"></i> Sign up with Google'.html_safe,user_omniauth_authorize_path(:facebook),class: "button small google" %></div>
-	</div>
+</div>
 </div>

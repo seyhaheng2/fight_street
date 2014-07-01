@@ -17,9 +17,9 @@
 						<% end %>
 						<ul>
 							<li>
-								<%= link_to site_info_path do %>
-								<i class="fa fa-info"></i>&nbsp;
-								<%= current_user.username %>
+								<%= link_to "#" do %>
+								<i class="fa fa-info"></i>
+								<%= current_user.name %>
 								<% end %>
 							</li>
 							<li><%= link_to '<i class="fa fa-wrench"></i> settings'.html_safe, edit_user_registration_path %></li>
