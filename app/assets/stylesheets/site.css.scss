@@ -14,8 +14,11 @@ padding-bottom:90px;
 		padding-right:5%;
 		height: 90px;
 		margin:0px;
-		display:flex;
-		-webkit-display:flexbox;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	  	display: -webkit-flex;     /* NEW - Chrome */
+	  	display: flex; 
 		// line-height: 1.25;
 		.brand{
 			width: 230px;
@@ -287,6 +290,7 @@ ul.login-form li:hover ul{
 }
 footer{
 	.footer{
+		bottom:0px;
 		ul.foot-bar{
 			h2{
 				margin-top: 0;
@@ -342,10 +346,9 @@ footer{
 	}
 }
 .pre-account{
-	width: 235px;
+	width: 270px;
 	height: auto;
-	margin-right:30px;
-	margin-left:10px;
+	margin-right:60px;
 	box-shadow: 0px 0px 5px #CECECE;
 	    .title{
 	    	background: #353535;
@@ -372,21 +375,34 @@ footer{
 	    	}
 	    }
 }
-.large-7{
-	a{
-		display: block;
-		&:hover{
-		  .pre-account{
-
-		  	padding-bottom: 0px;
-		  	border-bottom: 2px solid #F0C417;
-		  	.title{
-		  		background: #F0C417;
-		  		color:#fff;
-		  	}
-		  	li{
-		  	}
-		  }	
-		}
-	}
+.pre-account:last-child{
+	padding-left:40px;
+}
+.my-form{
+	width: 40%;
+	border-left:3px solid;
+	padding-left:30px;
+}
+.pre-form{
+	width: 60%;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex; 
+}
+.control-button{
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex; 
+}
+.my-formlogin{
+	width: 100%;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  	display: -ms-flexbox;      /* TWEENER - IE 10 */
+  	display: -webkit-flex;     /* NEW - Chrome */
+  	display: flex; 
 }

@@ -13,6 +13,7 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'mail_form'
 gem 'delayed_job_active_record'
+gem 'activemerchant'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
